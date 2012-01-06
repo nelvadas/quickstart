@@ -39,6 +39,7 @@
       <module>kitchensink-ear</module>
       <module>kitchensink-jsp</module>
       <module>numberguess</module>
+      <module>payment-cdi-event</module>
       <module>servlet-async</module>
       <module>servlet-filterlistener</module>
       <module>bmt</module>
