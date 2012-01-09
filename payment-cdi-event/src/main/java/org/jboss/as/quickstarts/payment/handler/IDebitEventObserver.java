@@ -1,4 +1,10 @@
 package org.jboss.as.quickstarts.payment.handler;
+/**
+ * 
+ * @author Elvadas-Nono
+ *
+ */
+
 
 import javax.enterprise.event.Observes;
 

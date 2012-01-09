@@ -54,14 +54,12 @@ public class PaymentBean implements Serializable {
 		
 		switch (currentEvtPayload.getType()) {
 		case DEBIT:
-			log.info("=======D:"+currentEvtPayload.toString());
 
 			debitEventProducer.fire(currentEvtPayload);
 			
 			break;
 		case CREDIT:
 			creditEventProducer.fire(currentEvtPayload);
-			log.info("=======C:"+currentEvtPayload.toString());
 
 			break;
 

@@ -38,7 +38,7 @@ public class PaymentHandler implements Serializable,ICreditEventObserver, IDebit
 
 	public void onCreditPaymentEvent(@Observes @Credit PaymentEvent event){
 
-		logger.info("hihi I catch a credit");
+		logger.info("Processing the credit operation "+event);
 		payments.add(event);
 	}
 
@@ -46,7 +46,7 @@ public class PaymentHandler implements Serializable,ICreditEventObserver, IDebit
 	
 	@Override
 	public void onDebitPaymentEvent(@Observes @Debit PaymentEvent event) {
-		logger.info("I catch a debit");
+		logger.info("Processing the debit operation "+event);
 		payments.add(event);
 		
 	}

@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class PaymentEvent {
 
-	private PaymentTypeEnum type;
+	private PaymentTypeEnum type;  //credit or debit
 	private BigDecimal amount;
 	private Date datetime;
 	
@@ -31,7 +31,7 @@ public class PaymentEvent {
 	}
 
 	public String toString(){
-		return "\nEVT:"+getDatetime()+":$"+getAmount()+":"+getType();
+		return "EVT:"+getDatetime()+":$"+getAmount()+":"+getType();
 	}
 	
 	
