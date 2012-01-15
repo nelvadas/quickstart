@@ -23,13 +23,13 @@ With the prerequisites out of the way, you're ready to build and deploy.
 Deploying the application
 -------------------------
 
-Start JBoss AS 7.1.0. by running this script
+First of all you need to enable the "admin" user from $JBOSS_HOME/standalone/configuration/mgmt-users.properties file, and then start JBoss AS 7.1.0. by running this script
   
-    $JBOSS_HOME/bin/standalone.sh -c standalone-full.xml
+    $JBOSS_HOME/bin/standalone.sh
   
 or if you are using windows
  
-    $JBOSS_HOME/bin/standalone.bat -c standalone-full.xml
+    $JBOSS_HOME/bin/standalone.bat
 
 To deploy the application, you first need to produce the archive to deploy using
 the following Maven goal:

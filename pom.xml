@@ -4,7 +4,7 @@
    <parent>
       <groupId>org.jboss</groupId>
       <artifactId>jboss-parent</artifactId>
-      <version>8</version>
+      <version>6-beta-2</version>
       <relativePath />
    </parent>
    <groupId>org.jboss.as.quickstarts</groupId>
@@ -24,29 +24,26 @@
     </licenses>
 
    <modules>
-      <module>bmt</module>
       <module>cdi-injection</module>
-      <module>cmt</module>
       <module>ejb-in-ear</module>
       <module>ejb-in-war</module>
-      <module>ejb-remote</module>
       <module>greeter</module>
-      <!-- <module>h2-console</module> -->
       <module>helloworld</module>
       <module>helloworld-gwt</module>
       <module>helloworld-jsf</module>
       <module>helloworld-mdb</module>
       <module>helloworld-osgi</module>
       <module>helloworld-rs</module>
-      <module>helloworld-singleton</module>
       <module>html5-mobile</module>
       <module>kitchensink</module>
       <module>kitchensink-ear</module>
       <module>kitchensink-jsp</module>
-      <module>log4jdemo</module>
       <module>numberguess</module>
+      <module>payment-cdi-event</module>
       <module>servlet-async</module>
       <module>servlet-filterlistener</module>
+      <module>bmt</module>
+      <module>ejb-remote</module>
    </modules>
 
    <scm>

@@ -38,10 +38,10 @@ public class HelloWorldMDBServletClient extends HttpServlet {
 	private static final int MSG_COUNT = 5;
 
 	@Resource(mappedName = "java:/ConnectionFactory")
-	private ConnectionFactory connectionFactory;
+	private static ConnectionFactory connectionFactory;
 
 	@Resource(mappedName = "java:/queue/test")
-	private Queue queue;
+	private static Queue queue;
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
