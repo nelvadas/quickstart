@@ -38,7 +38,7 @@
          </table>
          <p>
             <h:commandButton id="register"
-               action="#{memberRegistration.register}" value="Register" />
+               action="#{memberController.register}" value="Register" />
             <h:outputText value=" Registered!"
                rendered="#{facesContext.postback and empty facesContext.messageList}"
                style="color: green;" />
@@ -70,10 +70,52 @@
             <f:facet name="header">REST URL</f:facet>
             <a href="#{request.contextPath}/rest/members/#{_member.id}">/rest/members/#{_member.id}</a>
          </h:column>
-         <f:facet name="footer">
-                REST URL for all members: <a
-               href="#{request.contextPath}/rest/members">/rest/members</a>
-         </f:facet>
+         
       </h:dataTable>
    </ui:define>
+   
+  <!-- Search with JPA 2.0 Criteria -->
+  
+  
+  <ui:define name="search">
+   <h3>Search with JPA 2.0 Criteria API</h3>
+   
+   <p>
+   	Fill a combinaison of search criteria and click on search button
+   </p>
+   
+    <h:form id="searchForm">
+         <h2>Register (Bean Validation example)</h2>
+         <p>Enforces annotation-based constraints defined on the
+            model class.</p>
+         <table>
+            <tr>
+               <th style="text-align: right;"><h:outputLabel
+                     for="name" value="Name:" /></th>
+               <td><h:inputText id="name" value="#{memberCriteria.name}" />
+                 </td>
+            </tr>
+            <tr>
+               <th style="text-align: right;"><h:outputLabel
+                     for="email" value="Email:" /></th>
+               <td><h:inputText id="email"
+                     value="#{memberCriteria.email}" /></td>
+            </tr>
+            <tr>
+               <th style="text-align: right;"><h:outputLabel
+                     for="phoneNumber" value="Phone #:" /></th>
+               <td><h:inputText id="phoneNumber"
+                     value="#{memberCriteria.phoneNumber}" /></td>
+            </tr>
+         </table>
+         <p>
+            <h:commandButton id="register"
+               action="#{memberController.search}" value="Search" />
+         </p>
+      </h:form>
+   
+   
+  </ui:define>
+   
+   
 </ui:composition>

@@ -11,6 +11,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
 
+import org.jboss.as.quickstarts.kitchensink.criteria.MemberCriteria;
 import org.jboss.as.quickstarts.kitchensink.model.Member;
 
 // The @Stateful annotation eliminates the need for manual transaction demarcation
@@ -20,7 +21,7 @@ import org.jboss.as.quickstarts.kitchensink.model.Member;
 // Read more about the @Model stereotype in this FAQ:
 // http://sfwk.org/Documentation/WhatIsThePurposeOfTheModelAnnotation
 @Model
-public class MemberRegistration {
+public class MemberController {
 
    @Inject
    private Logger log;
@@ -32,8 +33,19 @@ public class MemberRegistration {
    private Event<Member> memberEventSrc;
 
    private Member newMember;
+   
+   private MemberCriteria memberCriteria;
+   
 
    @Produces
+   @Named
+   public MemberCriteria getMemberCriteria() {
+	return memberCriteria;
+   }
+
+
+
+@Produces
    @Named
    public Member getNewMember() {
       return newMember;
@@ -46,8 +58,15 @@ public class MemberRegistration {
       initNewMember();
    }
 
+   //Search Operation 
+   public void search() throws Exception {
+	      log.info("Search Invoke ");
+	   }
+   
+   
    @PostConstruct
    public void initNewMember() {
       newMember = new Member();
+      memberCriteria= new MemberCriteria();
    }
 }

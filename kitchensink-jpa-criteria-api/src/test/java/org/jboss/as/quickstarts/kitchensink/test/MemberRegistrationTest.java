@@ -15,7 +15,7 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import org.jboss.as.quickstarts.kitchensink.controller.MemberRegistration;
+import org.jboss.as.quickstarts.kitchensink.controller.MemberController;
 import org.jboss.as.quickstarts.kitchensink.model.Member;
 import org.jboss.as.quickstarts.kitchensink.util.Resources;
 
@@ -24,13 +24,13 @@ public class MemberRegistrationTest {
    @Deployment
    public static Archive<?> createTestArchive() {
       return ShrinkWrap.create(WebArchive.class, "test.war")
-            .addClasses(Member.class, MemberRegistration.class, Resources.class)
+            .addClasses(Member.class, MemberController.class, Resources.class)
             .addAsResource("META-INF/persistence.xml", "META-INF/persistence.xml")
             .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml");
    }
 
    @Inject
-   MemberRegistration memberRegistration;
+   MemberController memberRegistration;
 
    @Inject
    Logger log;

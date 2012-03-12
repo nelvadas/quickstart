@@ -38,9 +38,8 @@
       <module>kitchensink</module>
       <module>kitchensink-ear</module>
       <module>kitchensink-jsp</module>
-      <module>kitchensink-jpa-criteria</module>
       <module>numberguess</module>
-      <module>payment-cdi-event</module>
+      <module>kitchensink-jpa-criteria-api</module>
       <module>servlet-async</module>
       <module>servlet-filterlistener</module>
       <module>bmt</module>
